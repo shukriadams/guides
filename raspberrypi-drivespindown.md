@@ -38,6 +38,10 @@ close to the top of the file, find and set the following flag to enable it
 At the end of the file, add the following line to set all drives to sleep after 10 minutes(600 seconds)
 
     HD_IDLE_OPTS="-i 0 -i 600"
-    
+
+Restart service for changes to take effect
+
+    sudo service hd-idle restart
+
 (credits : https://www.htpcguides.com/spin-down-and-manage-hard-drive-power-on-raspberry-pi/)
     
