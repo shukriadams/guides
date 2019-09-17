@@ -1,6 +1,6 @@
 # Samba server on Raspberry Pi
 
-- Requires a Rarpberry Pi b or better.
+- Requires a Rarpberry Pi 3b or better.
 - confirmed working on Stretch and Buster.
 
     sudo apt-get update 
