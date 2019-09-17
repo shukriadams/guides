@@ -67,9 +67,9 @@ To end of file add the following
 - [myShare] means your your SMB share will appear as myShare under your host name. This can be any string you want.
 - Note: this creates a fully public share
 
-    [myShare]
+       [myShare]
        comment=some comment #  not important   
-    path=/mnt/extStorage
+       path=/mnt/extStorage
        browseable=Yes
        writeable=Yes
        only guest=no
