@@ -19,9 +19,7 @@ You should should now be able to see your usb device as /dev/sda1 or /dev/sda2
 
     sudo blkid
 
-Assiming */dev/sdaX* is your drive and */mnt/extStorage* is where you want to mount it
-
-mount drive where X is the number from blkid above
+Assuming */dev/sdaX* is your drive and */mnt/extStorage* is where you want to mount it, mount the drive 
 
     sudo mkdir /mnt/extStorage
     sudo mount -t ntfs-3g /dev/sdaX /mnt/extStorage
@@ -54,11 +52,11 @@ Edit your samba conf file
 
     sudo nano /etc/samba/smb.conf
 
-if you version of Samba has this (near the top of file) enable it and change to the following. newer versions dropped this.
+if your version of Samba lists win support (near the top of file), enable it. Newer versions have dropped this.
     
     win support = yes
 
-workgroup should match your pc's workgroup, default value should be fine
+workgroup should match your pc's workgroup, the default value should be fine
 
     workgroup = your_workgroup_name # WORKGROUP is default can normally leave this as is
 
@@ -84,7 +82,7 @@ restart samba
 Your samba share should now be available at \\PIHOSTNAME or smb:\\PIHOSTNAME
 
 
-For a private share, from shell, create a unix user and give that user a samba password, this can be the same as itsunix password
+For a private share, from shell, create a unix user and give that user a samba password, this can be the same as its unix password
     
     sudo adduser YOURUSERNAME
     sudo smbpasswd -a YOURUSERNAME
