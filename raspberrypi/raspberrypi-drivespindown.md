@@ -1,3 +1,6 @@
+# Enabling harddrive spin-down on Raspberry Pi
+
+USB 3.0 drives connected to the Raspberry Pi can be set to spin down while not in use.
 
 Install hd-idle by building it. First install required build tools
 
