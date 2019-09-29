@@ -19,7 +19,7 @@ This guide describes constructing a multi-disk file server basedon a Raspberry P
 
 This guide assumes you're already comfortable installing Rasbian on an SSD and accessing it via SSH.
 
-- (raspberrypi-samba-server.md)[Setting up Samba]
+- (/raspberrypi-samba-server.md)[Setting up Samba]
 - (raspberrypi-drivespindown.md)[Enabling drive spin-down]
 
 ## Power Draw
