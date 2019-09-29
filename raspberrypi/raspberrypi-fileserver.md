@@ -5,8 +5,8 @@ This guide describes constructing a multi-disk file server basedon a Raspberry P
 ## Hardware
 
 - Raspberry Pi 4 (1,2 or 4GB model)
-- (https://www.tp-link.com/us/home-networking/usb-hub/uh700/)[TP-Link UH700] powered USB3.0 hub
-- 1-6 (https://www.seagate.com/gb/en/consumer/backup/backup-plus/)[4tb Seagate Backup Plus]. You can use any unpowered USB 3.0 drive, but I find these Seagate drives to be perfect for their large size and low price.
+- [TP-Link UH700](https://www.tp-link.com/us/home-networking/usb-hub/uh700/) powered USB3.0 hub
+- 1-6 [4tb Seagate Backup Plus](https://www.seagate.com/gb/en/consumer/backup/backup-plus/). You can use any unpowered USB 3.0 drive, but I find these Seagate drives to be perfect for their large size and low price.
 - USB A-to-C power cable for the Raspberry Pi.
 
 ## Software
@@ -19,8 +19,8 @@ This guide describes constructing a multi-disk file server basedon a Raspberry P
 
 This guide assumes you're already comfortable installing Rasbian on an SSD and accessing it via SSH.
 
-- (/raspberrypi-samba-server.md)[Setting up Samba]
-- (raspberrypi-drivespindown.md)[Enabling drive spin-down]
+- [Setting up Samba](/raspberrypi-samba-server.md)
+- [Enabling drive spin-down](/raspberrypi-drivespindown.md)
 
 ## Power Draw
 
