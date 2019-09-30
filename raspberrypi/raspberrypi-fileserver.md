@@ -1,6 +1,6 @@
 # Raspbery Pi file server
 
-This guide describes constructing a multi-disk file server basedon a Raspberry Pi 4. The server has relatively high throughput because of the Pi 4's imrpoved disk IO.
+This guide describes constructing a multi-disk file server basedon a Raspberry Pi 4. The server has relatively high throughput because of the Pi 4's improved disk IO.
 
 ## Hardware
 
