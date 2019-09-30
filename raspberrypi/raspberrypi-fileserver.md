@@ -11,9 +11,9 @@ This guide describes constructing a multi-disk file server basedon a Raspberry P
 
 ## Software
 
-- For a base OS we'll use Raspbian Buster lite, with SSH enabled.
-- For file sharing we'll use Samba.
-- For file system we'll use NTFS. This makes it easy to transfer the disks to other machines, as NTFS is fairly widely supported now.
+- For a base OS I used Raspbian Buster lite, with SSH enabled.
+- I opted for NTFS as the drive's file system. This makes it easy to transfer the disks to other machines, as NTFS is fairly widely supported now. 
+- For file sharing I used Samba.
 
 ## Setup
 
@@ -25,10 +25,15 @@ This guide assumes you're already comfortable installing Rasbian on an SSD and a
 ## Power Draw
 
 - The base power draw of a Raspberry PI 4 idling is 6 watts.
-- The base power draw of the TP-Link hub with no devices plugged into it is 4W.
-- The draw of the Pi, TP-Link and 2 4TB Seagate disks, with the disks powered down, was 11W, and I'm assuming this draw will remain flat if additional drives are attached.
+- The base power draw of the TP-Link hub with no devices attached is 4W.
+- The draw of the Pi, TP-Link and 2 4TB Seagate disks, with the disks powered down, is 11W, and I'm assuming this draw will remain flat for additional drives when powered down.
 
 Draw was measured using an ESIC PM300 meter, but any metering unit will do.
+
+## Future improvements
+
+- Migrate disks to a more resilient file system like BTRfs.
+- Build a compact, well-ventilated case for the hub and disks.
 
 
 
