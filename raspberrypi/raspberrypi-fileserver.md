@@ -7,7 +7,9 @@ This guide describes constructing a multi-disk file server basedon a Raspberry P
 - Raspberry Pi 4 (1,2 or 4GB model)
 - [TP-Link UH700](https://www.tp-link.com/us/home-networking/usb-hub/uh700/) powered USB3.0 hub
 - 1-6 [4tb Seagate Backup Plus](https://www.seagate.com/gb/en/consumer/backup/backup-plus/). You can use any unpowered USB 3.0 drive, but I find these Seagate drives to be perfect for their large size and low price.
-- USB A-to-C power cable for the Raspberry Pi.
+- USB A-to-C power cable for the Raspberry Pi. 
+
+You won't need a dedicated power supply for the Pi - connect its power input to one of the ports on the hub. As long as you aren't connecting any power-drawing devices to the Pi's USB ports, the hub will provide enough power without undervolting.
 
 ## Software
 
@@ -32,7 +34,7 @@ Draw was measured using an ESIC PM300 meter, but any metering unit will do.
 
 ## Future improvements
 
-- Migrate disks to a more resilient file system like BTRfs.
+- Migrate disks to a more resilient file system like Btrfs.
 - Build a compact, well-ventilated case for the hub and disks.
 
 
