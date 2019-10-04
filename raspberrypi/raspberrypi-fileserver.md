@@ -1,6 +1,6 @@
 # Raspbery Pi file server
 
-This guide describes constructing a multi-disk file server basedon a Raspberry Pi 4. The server has relatively high throughput because of the Pi 4's improved disk IO.
+This guide describes constructing a simple, multi-disk file server basedon a Raspberry Pi 4. The server has relatively high throughput because of the Pi 4's improved disk IO. Note that this server is only for storing and sharing your files on a local network - it doesn't have anything fancy like RAID for increased speed or data redundancy.
 
 ## Hardware
 
@@ -14,7 +14,7 @@ You won't need a dedicated power supply for the Pi - connect its power input to 
 ## Software
 
 - For a base OS I used Raspbian Buster lite, with SSH enabled.
-- I opted for NTFS as the drive's file system. This makes it easy to transfer the disks to other machines, as NTFS is fairly widely supported now. 
+- I opted for NTFS as the drive's file system. This makes it easy to transfer the disks to other machines, including Windows.  
 - For file sharing I used Samba.
 
 ## Setup
@@ -34,7 +34,6 @@ Draw was measured using an ESIC PM300 meter, but any metering unit will do.
 
 ## Future improvements
 
-- Migrate disks to a more resilient file system like Btrfs.
 - Build a compact, well-ventilated case for the hub and disks.
 
 
