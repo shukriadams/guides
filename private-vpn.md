@@ -24,7 +24,7 @@ edit security settings
 
 find the line "${distro_id}:${distro_codename}-updates"; in the first Uanttended-Upgrade:: block and remove its leading \\ to enable it.
   
-find, enable and set the following two lines for email warnings
+find, uncomment and set the following lines based on requirements
     
     Unattended-Upgrade::Mail "user@example.com";
     Unattended-Upgrade::MailOnlyOnError "true";
