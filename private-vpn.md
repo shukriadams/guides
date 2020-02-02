@@ -53,9 +53,17 @@ you can also confirm auto updates have run by checking logs after a few days
 
 ## Firewall
 
+Confirm uncomplicated firewall is installed
+
     sudo ufw status
 
-    sudo ufw allow ssh (Must do this before enabling or you can't ssh in!)
+if not, install
+
+    sudo apt-get install ufw
+
+Configure with
+
+    sudo ufw allow ssh 
     sudo ufw allow http
     sudo ufw allow https
     sudo ufw allow 10447/udp
