@@ -3,11 +3,11 @@
 your vps should have 1 core, 512 megs of ram, and plenty of bandwidth
 install ubuntu 18.04
 
-- ssh into box
+ssh into box
 
-- create a non-root user, give it root permission log to this user
+create a non-root user, give it root permission log to this user
 
-- update and upgrade
+update and upgrade
 
     sudo apt-get update -y
     sudo apt upgrade -y
