@@ -1,7 +1,14 @@
 # Private VPN
 
-your vps should have 1 core, 512 megs of ram, and plenty of bandwidth
-install ubuntu 18.04
+Your vps should have 
+
+- 1 or more corec
+- 512 megs or more of RAM
+- plenty of bandwidth
+- disk space doesn't matter too much
+- ubuntu 18.04
+- Note : this installation doesn't seem to work on OpenVZ/linux containers.
+
 
 ssh into box
 
