@@ -44,3 +44,23 @@ replace [YOUR-URL-HERE.com] with whatever you want to display. Finally reboot
     sudo reboot
 
 After startup you should get a full screen Chromium instance displaying the url you added.
+
+## Video mode
+
+To display video instead of a webpage, install VLC
+
+    sudo apt-get install vlc -y
+ 
+ And replace the @chromium-browser line in your autostart script with a command to play a video file
+ 
+     @vlc /path/to/video.mp4 --fullscreen --loop
+
+Or better still, a playlist
+
+    @vlc /path/to/video.xspf --fullscreen --loop
+
+Note, you'll probbaly want to disable onscreen titles in VLC : 
+
+    Tools > Preferences > Select Subtitles & OSD > Show media title on video start
+    
+    
