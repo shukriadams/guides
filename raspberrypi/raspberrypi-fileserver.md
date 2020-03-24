@@ -30,7 +30,7 @@ This guide assumes you're already comfortable installing Rasbian on an SSD and a
 - The base power draw of the TP-Link hub with no devices attached is 4W.
 - The draw of the Pi, TP-Link and 2 4TB Seagate disks, with the disks powered down, is 11W, and I'm assuming this draw will remain flat for additional drives when powered down.
 
-Draw was measured using an ESIC PM300 meter, but any metering unit will do.
+Draw was measured using an ESIC PM300 meter.
 
 ## Future improvements
 
