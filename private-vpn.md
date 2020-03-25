@@ -2,12 +2,13 @@
 
 Your vps should have 
 
-- 1 or more corec
+- 1 or more core
 - 512 megs or more of RAM
 - plenty of bandwidth
 - disk space doesn't matter too much
 - ubuntu 18.04
-- Note : this installation doesn't seem to work on OpenVZ/linux containers.
+
+Note : this installation doesn't seem to work on OpenVZ/linux containers, you should have a KVM or run directly on the metal.
 
 
 ssh into box
@@ -124,10 +125,8 @@ and paste in the default username and password it gives you.
 
 ## management
 
-create on organization and then a user
-
-create a server, set its port to 10447 (the port we opened further up). Enable multidevices, google authenticator, etc.
-
-Attach organization to server. Then click on "start server".
+- Create on organization and then a user
+- create a server, set its port to 10447 (the port we opened further up). Enable multidevices, google authenticator, etc.
+- Attach organization to server. Then click on "start server".
 
     
