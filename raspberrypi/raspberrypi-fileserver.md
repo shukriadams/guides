@@ -32,6 +32,18 @@ This guide assumes you're already comfortable installing Rasbian on an SSD and a
 
 Draw was measured using an ESIC PM300 meter.
 
+## Really simply redundancy
+
+I wanted to add some kind of data safety to this system. Ideally it would be Raid 1, but I cannot find an implementation that works over USB, so here's a poor-man's compromise - duplicate the data from one drive onto another with a cronjob and rsync. Edit your cron jobs with 
+
+    crontab -e
+
+and to the bottom add
+
+    0 0 * * 0 rsync -avh /mnt/drive1/ /mnt/drive2/ --delete > /home/pi/rsync-cron.log 2>&1
+
+0 0 * * 0 syncs my data every Sunday, from /mnt/drive1/ to /mnt/drive2/. The result of this are logged to ~/rsync-cron.log just so you have some idea of what's going on. Change the cronmask, source, target folders and log path to whatever suits you. 
+
 ## Future improvements
 
 - Build a compact, well-ventilated case for the hub and disks.
