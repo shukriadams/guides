@@ -19,28 +19,32 @@ You should should now be able to see your usb device as /dev/sda1 or /dev/sda2
 
     sudo blkid
 
-Assuming */dev/sdaX* is your drive and */mnt/extStorage* is where you want to mount it, mount the drive 
+You will also be able to read it's UUID="some-random-string"
+
+Assuming */dev/sdaX* is your drive and */mnt/extStorage* is where you want to mount it, test mount the drive 
 
     sudo mkdir /mnt/extStorage
     sudo mount -t ntfs-3g /dev/sdaX /mnt/extStorage
 
-confirm the mount 
+confirm the mount with
 
     ls /mnt/extStorage/
 
-(hint, to unmount)
+then unmount again with
 
     umount /mnt/extStorage
 
-Make the mount permanent
+Now make the mount permanent
 
     sudo nano /etc/fstab
 
 and add this line to end of file, dont' forget to change the X to your dev number
 
-    /dev/sdaX /mnt/extStorage ntfs-3g defaults 0 0
+    UUID=some-random-string /mnt/extStorage ntfs-3g defaults,nofail 0 0
 
-restart and confirm everything works
+Substituting in the UUID of your drive (without quotes). Avoid mounting /dev/xxx references, as these can  suddenly change when you add new drives to your system. The "nofail" option allows your Pi to continue booting if the drive mount should fail - not setting this will likely cause you to get locked out of your Pi.
+
+Restart and confirm everything works
 
     sudo reboot
 
