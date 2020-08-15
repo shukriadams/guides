@@ -3,8 +3,8 @@
 - Requires a Rarpberry Pi 3b or better.
 - confirmed working on Stretch and Buster.
 
-    sudo apt-get update 
-    sudo apt-get upgrade -y
+      sudo apt-get update 
+      sudo apt-get upgrade -y
 
 Then run this agains to update the list after upgrade
   
