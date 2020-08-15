@@ -9,9 +9,26 @@ You can get Docker to install on Raspbian using the basic
 
     apt-get install docker-io docker-compose -y
     
-but this install will not functional properly (container mounting fails with "unable to find "net_prio" in controller set"). The simplest install is
+but this install will not functional properly (container mounting fails with "unable to find "net_prio" in controller set"). Another commonly used method for installing Docker is via a get script 
 
     curl -fsSL get.docker.com | CHANNEL=nightly sh
+
+but with this, you have no control over which version of Docker you're running. My preferred approach is
+
+    wget https://download.docker.com/linux/raspbian/dists/buster/pool/stable/armhf/containerd.io_1.2.13-2_armhf.deb &&
+    wget https://download.docker.com/linux/raspbian/dists/buster/pool/stable/armhf/docker-ce-cli_19.03.12~3-0~raspbian-buster_armhf.deb &&
+    wget https://download.docker.com/linux/raspbian/dists/buster/pool/stable/armhf/docker-ce_19.03.12~3-0~raspbian-buster_armhf.deb &&
+    sudo dpkg -i docker-ce-cli_19.03.12~3-0~raspbian-buster_armhf.deb &&
+    sudo dpkg -i containerd.io_1.2.13-2_armhf.deb &&
+    sudo dpkg -i docker-ce_19.03.12~3-0~raspbian-buster_armhf.deb &&
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &&
+    sudo chmod +x /usr/local/bin/docker-compose
+    
+Paste that entire block into a terminal and run, it will install Docker for rasbian from fixed packages, so you can recreate your setup, or run docker-in-docker. If using this method, be sure to add your pi user to the docker group
+
+    sudo usermod -aG docker pi
+    
+and relog for this to take effect
 
 ## Gotchas
 
