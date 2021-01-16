@@ -1,7 +1,7 @@
 # Samba server on Raspberry Pi
 
-Requires a Rarpberry Pi 3b or better.
-confirmed working on Stretch and Buster.
+Requires a Rarpberry Pi 3b or better. Confirmed working on Stretch and Buster. This guide is for NTFS disks - disks should already be formatted for NTFS. If they are not, I 
+strongly suggest you mount and format them on a Windows system, as this seems to be the fastest solution.
 
     sudo apt-get update 
     sudo apt-get upgrade -y
