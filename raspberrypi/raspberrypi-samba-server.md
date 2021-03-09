@@ -6,10 +6,6 @@ strongly suggest you mount and format them on a Windows system, as this seems to
     sudo apt-get update 
     sudo apt-get upgrade -y
 
-Then run this agains to update the list after upgrade
-  
-    sudo apt-get update 
-
 Install ntfs support. reboot is necessary for ntfs support to be applied (if you get modprobe: FATAL: Module fuse not found)
 
     sudo apt-get install ntfs-3g -y
