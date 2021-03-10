@@ -30,6 +30,7 @@ function backup(){
 # DIRECTORIES TO BACKUP
 # Example :
 #
-# backup "/home/pi/test1" "/home/pi/test2" "thetest"
+# backup "/home/pi/test1" "/home/pi/test2" "job-name"
 
-backup "/home/pi/test1" "/home/pi/test2" "thetest"
+backup "/home/pi/test1" "/home/pi/test2" "my-first-test-backup"
+backup "/home/pi/test3" "/home/pi/test4" "my-other-test-backup"
