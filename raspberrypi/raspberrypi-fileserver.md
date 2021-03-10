@@ -42,7 +42,15 @@ and to the bottom add
 
     0 0 * * 0 rsync -avh /mnt/drive1/ /mnt/drive2/ --delete > /home/pi/rsync-cron.log 2>&1
 
-0 0 * * 0 syncs my data every Sunday, from /mnt/drive1/ to /mnt/drive2/. The result of this are logged to ~/rsync-cron.log just so you have some idea of what's going on. Change the cronmask, source, target folders and log path to whatever suits you. 
+`0 0 * * 0` syncs my data every Sunday, from `/mnt/drive1/` to `/mnt/drive2/`. The result of this are logged to `~/rsync-cron.log` just so you have some idea of what's going on. Change the cronmask, source, target folders and log path to whatever suits you. 
+
+If you want to take it a step a further, I wrote a backup script that has a bit more safety 
+- it won't backup an empty source disk to a populated backup disk, this can happen if your source drive fails to mount
+- it will email you if a failure happens.
+
+The script is [here](https://github.com/shukriadams/guides/blob/master/raspberrypi/backup.sh), place it at `/home/pi/backup.sh`, update it to include the paths you want backed up and in crontab use this instead
+
+    0 0 * * 0 /home/pi/backup.sh /home/pi/backup-cron.log 2>&1
 
 ## Future improvements
 
